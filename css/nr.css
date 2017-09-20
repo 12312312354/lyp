@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration:none;
+}
+.w{
+    width: 1200px;
+    margin-left: 83px;
+}
+.orderBy_asc {
+    background-position: 0 -90px!important;
+}
+
+.commands_order_desc {
+    background-position: 0 -52px !important;
+}
+.orderBy_desc {
+    background-position: 0 -110px!important;
+}
+/**/
+.TOP{
+    width: 100%;
+    height: 20px;
+}
+.TOP-L{
+    width: 500px;
+    float: left;
+}
+.TOP-L ul li{
+    display: inline-block;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+.TOP-L ul li a{
+    color: silver;
+}
+.TOP-L ul li a:hover{
+    color: red;
+}
+
+.TOP-R{
+    float: right;
+}
+.TOP-R ul li{
+    display: inline-block;
+    font-size: 12px;
+    padding: 0 5px;
+}
+.TOP-R ul li a{
+    color: silver;
+}
+.TOP-R ul li a:hover{
+    color: red;
+}
+/**/
+.NAV{
+    width: 100%;
+    height: 75px;
+}
+.NAV .log{
+    height: 75px;
+    float: left;
+    position: absolute;
+}
+.NAV .log img{
+    margin-top: 20px;
+    z-index: 9999;
+}
+.nav-a{
+    width: 500px;
+    height: 75px;
+    position: relative;
+    left: 300px;
+    float: left;
+    font-size: 18px;
+}
+.nav-a ul li{
+     display: inline-block;
+    margin: 0 5px;
+ }
+.nav-a ul li a{
+    line-height: 90px;
+    color: black;
+}
+.nav-a ul li a:hover{
+    color: red;
+}
+
+.search{
+    width: 340px;
+    height: 40px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+
+}
+.search-a{
+    width: 340px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid silver;
+    outline:none;
+}
+.search .jlt{
+    width:22px;
+    height:22px;
+    background:url("../imgs/jlt.png") no-repeat -3px -28px;
+    position: relative;
+    margin-top: -30px;
+    margin-left:300px;
+}
+.xxx{
+    width: 1346px;
+    height: 5px;
+    background: silver;
+    position: absolute;
+    left: 0px;
+}
+/**/
+.homepage{
+    clear: both;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+}
+/**/
+.classify{
+    width: 100%;
+    height: 103px;
+}
+.classify-1{
+    width: 100%;
+    height: 50px;
+    border: 1px solid silver;
+    border-bottom:none;
+    font-size: 12px;
+}
+.classify-1 ul li{
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 50px;
+}
+.classify-1 ul li a{
+    color: silver;
+}
+.ys{
+    color: red !important;
+}
+.classify-1 ul li a:hover{
+    color: black;
+}
+.classify-2{
+     width: 100%;
+     height: 50px;
+     border: 1px solid silver;
+    font-size: 12px;
+ }
+.classify-2 ul li{
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 50px;
+}
+.classify-2 ul li a{
+    color: silver;
+}
+.classify-2 ul li a:hover{
+    color: black;
+}
+.classify-2 ul li a s{
+    display: block;
+    width: 8px;
+    height: 10px;
+    background:url('../imgs/icon1.png') ;
+    background-position:0 -70px;
+    position: absolute;
+    top: 220px;
+    margin-left: 40px;
+}
+.classify-2 ul li:nth-child(3) a s{
+    margin-left: 25px;
+}
+.classify-2 ul li:nth-child(4) a s{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background:url('../imgs/icon1.png') scroll no-repeat;
+    background-position: 0 -29px;
+    position: absolute;
+}
+.classify-2 ul li:nth-child(5) a s{
+    margin-left: 50px;
+}
+.ndd{
+    width: 1200px;
+    height: 20px;
+}
+/*商品列表*/
+.content{
+    width: 1222px;
+    height: 1000px;
+}
+.content ul{
+    display: block;
+    width: 1222px;
+    height: 1000px;
+    margin-left: 83px;
+}
+.content ul li{
+    display: block;
+    width: 244px;
+    height: 384px;
+    float: left;
+}
+.content ul li div{
+    width: 224px;
+    height: 364px;
+    border: 1px solid silver;
+}
+.content ul li div:hover{
+    border: 1px solid red;
+}
+.content ul li div p:nth-child(1){
+    display: block;
+    width: 222px;
+    height: 222px;
+}
+.content ul li div p:nth-child(1) img{
+    width: 180px;
+    height: 180px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.content ul li div p:nth-child(2){
+    display: block;
+    width: 222px;
+    height: 48px;
+}
+.content ul li div p:nth-child(2) a{
+    display: block;
+    width: 170px;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    color: slategrey;
+}
+.content ul li div p:nth-child(2) a:hover{
+    color: red;
+}
+.content ul li div p:nth-child(3){
+    display: block;
+    width: 222px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    line-height: 35px;
+}
+.content ul li div p:nth-child(4) a{
+    display: block;
+    width: 112px;
+    height: 30px;
+    margin-top: 28px;
+    float: left;
+    border-top: 1px solid silver;
+    border-right: 1px solid silver;
+    color: red;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+}
+.content ul li div p:nth-child(4) a:hover{
+    color: white;
+    background: red;
+}
+.content ul li div p:nth-child(4) span{
+    font-size: 14px;
+    position: relative;
+    top: 6px;
+    left: 40px;
+}
+.content ul li div p:nth-child(5){
+    display: block;
+    width: 111px;
+    height: 30px;
+    font-size: 14px;
+    float: right;
+    margin-top: 28px;
+    line-height: 30px;
+    text-align: center;
+    border-top: 1px solid silver;
+}

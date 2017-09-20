@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/nr.css"/>
+    <script src="lib/jquery-1.12.2.js"></script>
+</head>
+<script>
+    $(function(){
+        $(".classify-1 ul li a").each(function(){
+            $(this).click(function(){
+                var siblings=$(this).parent().parent().children();
+                $(siblings).each(function(){
+                    $(this).find("a").removeClass("ys");
+                    $(this).find("a").find("s").removeClass("orderBy_asc")
+                                               .removeClass("orderBy_desc")
+                                               .removeClass("commands_order_desc");
+                });
+                $(this).addClass("ys");
+                var type=$(this).attr("type");
+                if(type=="price" || type=="publishTime"){
+                    var flag= Boolean($(this).attr("flag"));
+                    flag=Boolean(flag);
+                    if(flag){
+                        $(this).find("s").addClass("orderBy_asc");
+                        $(this).attr("flag","");
+                    }else{
+                        $(this).find("s").addClass("orderBy_desc");
+                        $(this).attr("flag","true");
+                    }
+                }else if(type == "commands"){
+                    $(this).find("s").addClass("commands_order_desc");
+                }
+            });
+        });
+        getAllProducts();
+    });
+
+     function getAllProducts(){
+         $.ajax({
+             type:"post",
+             url:"data/productsList.json",
+             data:{"type":0,"ordeBy":0},
+
+             dataType:"json",
+             success: function(res){
+                 $(res).each(function(){
+                     var liObj=$("<li>");
+                     var divObj=$("<div>");
+                     $("<p>").append($("<a>").attr("href","#")
+                             .append($("<img>").attr("src",this.productImg)))
+                             .appendTo(divObj);
+                     divObj.appendTo(liObj);
+                     liObj.appendTo($("productsList"));
+                 });
+
+             }
+         });
+     }
+
+
+
+</script>
+<body>
+<div class="box">
+<div class="w">
+
+<div class="TOP">
+    <div class="TOP-L">
+        <ul>
+            <li><a href="">华为官网</a></li>
+            <li><a href="">荣耀官网</a></li>
+            <li><a href="">花粉俱乐部</a></li>
+            <li><a href="">帮助中心</a></li>
+            <li><a href="">V码(优购码)</a></li>
+            <li><a href="">Select Region</a></li>
+            <li><a href="">更多精彩</a></li>
+        </ul>
+    </div>
+    <div class="TOP-R">
+        <ul>
+            <li><a href="">请登录</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href="">我的订单</a></li>
+            <li><a href="">购物车(0)</a></li>
+        </ul>
+    </div>
+</div>
+<!---->
+<div class="NAV">
+<div class="log"><img src="imgs/201706301129294766528.png" alt=""/></div>
+<div class="nav-a">
+    <ul>
+        <li><a href="">手机</a></li>
+        <li><a href="">笔记本 & 平板</a></li>
+        <li><a href="">穿戴</a></li>
+        <li><a href="">智能家居</a></li>
+        <li><a href="">通用配件</a></li>
+        <li><a href="">专属配件</a></li>
+    </ul>
+</div>
+<div class="search">
+    <input type="text" class="search-a"/>
+    <div class="jlt"></div>
+</div>
+</div>
+<div class="xxx"></div>
+
+<div class="homepage">首页</div>
+<div class="classify">
+    <div class="classify-1">
+        <ul>
+            <li>分类&nbsp;:</li>
+            <li><a href="javascript:;" class="ys">全部</a></li>
+            <li><a href="javascript:;">荣耀</a></li>
+            <li><a href="javascript:;">HUAWEI P系列</a></li>
+            <li><a href="javascript:;">荣耀畅玩系列</a></li>
+            <li><a href="javascript:;">HUAWEI Mate系列</a></li>
+            <li><a href="javascript:;">HUAWEI nova系列</a></li>
+            <li><a href="javascript:;">华为 G系列</a></li>
+            <li><a href="javascript:;">华为畅享系列</a></li>
+            <li><a href="javascript:;">合约机</a></li>
+        </ul>
+    </div>
+    <div class="classify-2">
+        <div class="classify-1">
+        <ul>
+            <li>排序：</li>
+            <li><a href="javascript:;" class="ys">默认</a></li>
+            <li><a href="javascript:;" type="price" flag="true">价格<s></s></a></li>
+            <li><a href="javascript:;" type="commands">评价数<s></s></a></li>
+            <li><a href="javascript:;" type="publishTime" flag="true">上架时间<s></s></a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+    <div class="ndd"></div>
+</div>
+    <div class="content">
+        <ul id="productsList">
+            <!--<li>
+                <div>
+                    <p><img src="imgs/16.jpg" alt=""/></p>
+                    <p><a href="">华为畅享7 3GB+32GB 全网通高配版 （香槟金）</a></p>
+                    <p><b>￥6666</b></p>
+                    <p><a href=""><span>购买</span></a></p>
+                    <p>123人评价</p>
+
+                </div>
+            </li>-->
+            <!--<li>
+                <div>
+                    <p><img src="imgs/16.jpg" alt=""/></p>
+                    <p><a href="">华为畅享7 3GB+32GB 全网通高配版 （香槟金）</a></p>
+                    <p><b>￥6666</b></p>
+                    <p><a href=""><span>购买</span></a></p>
+                    <p>123人评价</p>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p><img src="imgs/16.jpg" alt=""/></p>
+                    <p><a href="">华为畅享7 3GB+32GB 全网通高配版 （香槟金）</a></p>
+                    <p><b>￥6666</b></p>
+                    <p><a href=""><span>购买</span></a></p>
+                    <p>123人评价</p>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p><img src="imgs/16.jpg" alt=""/></p>
+                    <p><a href="">华为畅享7 3GB+32GB 全网通高配版 （香槟金）</a></p>
+                    <p><b>￥6666</b></p>
+                    <p><a href=""><span>购买</span></a></p>
+                    <p>123人评价</p>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p><img src="imgs/16.jpg" alt=""/></p>
+                    <p><a href="">华为畅享7 3GB+32GB 全网通高配版 （香槟金）</a></p>
+                    <p><b>￥6666</b></p>
+                    <p><a href=""><span>购买</span></a></p>
+                    <p>123人评价</p>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p><img src="imgs/16.jpg" alt=""/></p>
+                    <p><a href="">华为畅享7 3GB+32GB 全网通高配版 （香槟金）</a></p>
+                    <p><b>￥6666</b></p>
+                    <p><a href=""><span>购买</span></a></p>
+                    <p>123人评价</p>
+
+                </div>
+            </li>-->
+        </ul>
+
+
+
+
+    </div>
+</div>
+</body>
+</html>

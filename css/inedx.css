@@ -1,0 +1,82 @@
+.content{
+    width: 1217px;
+    height: 1000px;
+    margin: auto;
+    margin-top: 10px;
+}
+.content ul{
+    width: 100%;
+}
+.content ul li{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.content ul li div{
+    width: 93%;
+    height: 360px;
+    border: 1px solid #dedede;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.content ul li div:hover{
+    border: 1px solid #ca141d;
+}
+.content ul li div p a img{
+    width: 155px;
+    height: 177px;
+    margin-top: 40px;
+    margin-left: 35px;
+}
+.content ul li div p a{
+    color: #666666;
+    margin-top: 30px;
+}
+.content ul li div p a:hover{
+    color: #ca141d;
+}
+.content ul li div p:nth-child(2){
+    margin-top: 30px;
+    margin-left: 35px;
+}
+.content ul li div p:nth-child(3){
+    margin-top: 30px;
+    margin-left: 80px;
+    color: #e01d20;
+    font-size: 20px;
+}
+.content ul li div p:nth-child(4){
+    width: 112px;
+    height: 32px;
+    float: left;
+    margin-top: 5px;
+    line-height: 32px;
+    text-align: center;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+}
+.content ul li div p:nth-child(4):hover{
+    background: #e01d20;
+}
+.content ul li div p:nth-child(4):hover a{
+    color: white;
+}
+.content ul li div p:nth-child(4) a{
+    color: #e01d20;
+}
+.content ul li div p:nth-child(5){
+    width: 112px;
+    height: 32px;
+    float: left;
+    margin-top: 5px;
+    border-top: 1px solid #dedede;
+    line-height: 32px;
+    text-align: center;
+    /*border-right: 1px solid #dedede;*/
+}
+
+.content .productStatus_icon {
+    position: absolute;
+    right: 30px;
+    bottom: 130px;
+}
